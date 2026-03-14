@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Professional Developer Portfolio
 
 This is a modern, responsive portfolio website built with React, Tailwind CSS, and Framer Motion.
@@ -55,3 +56,6 @@ This is a modern, responsive portfolio website built with React, Tailwind CSS, a
 - Update `src/components/` files to change content.
 - Replace placeholder images in `src/components/Projects.jsx`.
 - Update your email endpoint in `src/components/Contact.jsx`.
+=======
+# Portfolio
+>>>>>>> d1b8c133945cdb65ef420407488d6e011e23aeca
