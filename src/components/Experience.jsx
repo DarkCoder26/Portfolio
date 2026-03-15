@@ -7,7 +7,7 @@ const Experience = () => {
           role: "Hackathon Participant",
           company: "College Hackathon",
           date: "Recently",
-          description: "Participated in college hackathon (waiting list position). Developed CropCare project."
+          description: "Participated in SIH 2025 (waiting list position). Developed CropCare project."
         },
         {
           role: "Freelance Projects",
