@@ -113,7 +113,7 @@ const About = () => {
             className="w-full h-full min-h-[260px] sm:min-h-[320px] md:min-h-[400px] flex items-center justify-center relative"
           >
             {/* Animated Circles/Box Instead of 3D Character */}
-            <div className="relative w-28 h-28 sm:w-48 sm:h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 mx-auto">
+            <div className="relative w-32 h-32 min-w-[96px] min-h-[96px] sm:w-48 sm:h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 mx-auto">
               <motion.div 
                 animate={{ rotate: 360, scale: [1, 1.04, 1] }}
                 transition={{ duration: 22, repeat: Infinity, ease: "easeInOut" }}
@@ -122,13 +122,13 @@ const About = () => {
               <motion.div 
                 animate={{ rotate: -360, scale: [1, 1.08, 1] }}
                 transition={{ duration: 28, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute inset-8 rounded-full border-2 border-blue-500/20 border-dotted" 
+                className="absolute inset-3 sm:inset-8 rounded-full border-2 border-blue-500/20 border-dotted" 
               />
               <motion.div 
                 animate={{ y: [0, -18, 0], rotateY: [0, 10, 0] }}
                 whileHover={{ rotateY: 25, rotateX: -10, scale: 1.08 }}
                 transition={{ duration: 6, repeat: Infinity, ease: "anticipate", rotateY: { duration: 8, repeat: Infinity } }}
-                className="absolute inset-16 rounded-3xl bg-gradient-to-br from-cyan-900/50 to-blue-900/50 backdrop-blur-md border border-cyan-500/30 flex items-center justify-center shadow-[0_0_40px_rgba(34,211,238,0.15)] overflow-hidden"
+                className="absolute inset-6 sm:inset-16 rounded-3xl bg-gradient-to-br from-cyan-900/50 to-blue-900/50 backdrop-blur-md border border-cyan-500/30 flex items-center justify-center shadow-[0_0_40px_rgba(34,211,238,0.15)] overflow-hidden"
                 style={{ perspective: 1000, transformStyle: "preserve-3d" }}
               >
                 <div className="absolute inset-0 bg-cyan-400/5 group-hover:bg-cyan-400/10 transition-colors duration-500" />
