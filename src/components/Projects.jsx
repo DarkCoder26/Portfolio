@@ -30,23 +30,6 @@ const Projects = () => {
           ],
           color: "from-green-500 to-emerald-500"
         }
-        ,
-        {
-          title: "Calculator Pro",
-          category: "Python GUI Application",
-          description: "An advanced calculator for technical and non-technical users. Features a modern GUI, basic and scientific functions, unit conversions, calculation history, and more. Built with Python and Kivy for cross-platform compatibility.",
-          tech: ["Python", "Kivy"],
-          github: "https://github.com/DarkCoder26/Calculator-Pro.git",
-          features: [
-            "Basic arithmetic operations",
-            "Scientific functions: trigonometry, logarithms, exponentials",
-            "Unit conversions (length, mass, temperature, etc.)",
-            "Calculation history panel",
-            "Copy, paste, and clear entry buttons",
-            "Resizable and responsive window"
-          ],
-          color: "from-purple-500 to-cyan-500"
-        }
       ];
 
   return (
@@ -83,21 +66,14 @@ const Projects = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
             {projects.map((project, index) => (
                 <motion.div 
-                  key={index}
-                  initial={{ opacity: 0, y: 60, scale: 0.94, rotateX: 12, filter: 'blur(10px)' }}
-                  whileInView={{ opacity: 1, y: 0, scale: 1, rotateX: 0, filter: 'blur(0px)' }}
-                  viewport={{ once: true, margin: "-50px" }}
-                  transition={{ delay: index * 0.15, duration: 0.8, type: "spring", stiffness: 100, damping: 15 }}
-                  whileHover={{
-                    y: -18,
-                    scale: 1.06,
-                    rotateZ: 2,
-                    boxShadow: '0 0 40px 0 #22d3ee88, 0 12px 40px 0 #22d3ee33',
-                    borderColor: '#22d3ee',
-                    filter: 'brightness(1.07)'
-                  }}
-                  style={{ perspective: 1000 }}
-                  className="group relative bg-slate-900 rounded-2xl overflow-hidden border border-slate-800 hover:border-cyan-500/50 transition-all duration-300 shadow-xl hover:shadow-cyan-500/10"
+                    key={index}
+                    initial={{ opacity: 0, y: 60, scale: 0.9, rotateX: 20, filter: 'blur(10px)' }}
+                    whileInView={{ opacity: 1, y: 0, scale: 1, rotateX: 0, filter: 'blur(0px)' }}
+                    viewport={{ once: true, margin: "-50px" }}
+                    transition={{ delay: index * 0.15, duration: 0.8, type: "spring", stiffness: 100, damping: 15 }}
+                    whileHover={{ y: -20, scale: 1.04, rotateX: 5, rotateY: -5, boxShadow: '0 20px 50px rgba(34, 211, 238, 0.1)' }}
+                    style={{ perspective: 1000 }}
+                    className="group relative bg-slate-900 rounded-2xl overflow-hidden border border-slate-800 hover:border-cyan-500/50 transition-all duration-300 shadow-xl hover:shadow-cyan-500/10"
                 >
                     {/* Gradient Overlay on Hover */}
                     <div className={`absolute inset-0 bg-gradient-to-r ${project.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500 pointer-events-none`} />

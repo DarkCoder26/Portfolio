@@ -113,7 +113,7 @@ const About = () => {
             className="w-full h-full min-h-[260px] sm:min-h-[320px] md:min-h-[400px] flex items-center justify-center relative"
           >
             {/* Animated Circles/Box Instead of 3D Character */}
-            <div className="relative w-48 h-48 sm:w-64 sm:h-64 lg:w-80 lg:h-80">
+            <div className="relative w-28 h-28 sm:w-48 sm:h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 mx-auto">
               <motion.div 
                 animate={{ rotate: 360, scale: [1, 1.04, 1] }}
                 transition={{ duration: 22, repeat: Infinity, ease: "easeInOut" }}
