@@ -27,3 +27,9 @@ yarn-error.log*
 # Ignore lock file if you use yarn or pnpm instead of npm
 # yarn.lock
 # pnpm-lock.yaml
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+!.env.example
