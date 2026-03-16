@@ -9,7 +9,6 @@ import {
 } from 'react-icons/si';
 import { FaJava } from 'react-icons/fa';
 import { VscVscode } from 'react-icons/vsc';
-import MagneticWrapper from './MagneticWrapper';
 
 const Skills = () => {
     
@@ -61,7 +60,14 @@ const Skills = () => {
   ];
 
   return (
-    <div name="skills" className="w-full min-h-screen bg-transparent text-slate-300 py-16 md:py-20 lg:py-24 relative z-10 transition-colors duration-500 overflow-hidden">
+    <motion.div 
+      name="skills" 
+      className="w-full min-h-screen bg-transparent text-slate-300 py-16 md:py-20 lg:py-24 relative z-10 transition-colors duration-500 overflow-hidden"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-100px" }}
+      transition={{ duration: 0.8 }}
+    >
        {/* Background Glow */}
        <motion.div 
          animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }}
@@ -105,13 +111,13 @@ const Skills = () => {
                     </h3>
                     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6">
                         {category.skills.map((skill, idx) => (
-                            <MagneticWrapper key={idx} className="flex w-full" intensity={0.15}>
                             <motion.div 
+                                key={idx}
                                 initial={{ opacity: 0, scale: 0.5, rotate: -15, filter: 'blur(5px)' }}
                                 whileInView={{ opacity: 1, scale: 1, rotate: 0, filter: 'blur(0px)' }}
                                 viewport={{ once: true, margin: "-50px" }}
                                 transition={{ duration: 0.6, delay: 0.1 + (idx * 0.05), type: "spring", stiffness: 150, bounce: 0.5 }}
-                                whileHover={{ scale: 1.08, y: -7, boxShadow: '0 0 30px #22d3ee33' }}
+                                whileHover={{ scale: 1.05, y: -7, boxShadow: '0 0 30px #22d3ee33' }}
                                 className="group bg-slate-900/50 backdrop-blur-sm shadow-lg hover:shadow-cyan-500/20 rounded-xl p-6 flex flex-col items-center justify-center border border-slate-800 hover:border-cyan-500/50 transition-all duration-300 relative overflow-hidden min-h-[140px] min-w-[120px] max-w-[140px] w-full"
                             >
                                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-cyan-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -123,14 +129,13 @@ const Skills = () => {
                                 )}
                                 <p className="font-medium text-slate-300 z-10 group-hover:text-cyan-200">{skill.name}</p>
                             </motion.div>
-                            </MagneticWrapper>
                         ))}
                     </div>
                 </motion.div>
             ))}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

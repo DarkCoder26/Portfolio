@@ -4,7 +4,14 @@ import { FaGraduationCap } from 'react-icons/fa';
 
 const Education = () => {
   return (
-    <div name="education" className="w-full bg-transparent text-slate-300 py-16 md:py-20 lg:py-24 relative z-10">
+    <motion.div 
+      name="education" 
+      className="w-full bg-transparent text-slate-300 py-16 md:py-20 lg:py-24 relative z-10"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-100px" }}
+      transition={{ duration: 0.8 }}
+    >
       <div className="max-w-3xl mx-auto px-2 sm:px-4 md:px-8 flex flex-col justify-center w-full h-full">
            <motion.div 
              initial={{ opacity: 0, y: 20 }}
@@ -41,8 +48,7 @@ const Education = () => {
             </motion.div>
           </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
-
 export default Education;

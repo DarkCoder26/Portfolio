@@ -1,32 +1,16 @@
 import React from 'react';
+import BackgroundAnimation from './Particles';
 import { motion } from 'framer-motion';
 import { Link } from 'react-scroll';
 import { HiArrowNarrowRight } from 'react-icons/hi';
 import { TypeAnimation } from 'react-type-animation';
+import FloatingShape from './FloatingShape';
 
 const Hero = () => {
-  const [mousePos, setMousePos] = React.useState({ x: 0, y: 0 });
-
-  React.useEffect(() => {
-    const handleMove = (e) => {
-      // Subtle movement factor
-      setMousePos({ 
-        x: (e.clientX - window.innerWidth / 2) / 25, 
-        y: (e.clientY - window.innerHeight / 2) / 25 
-      });
-    };
-    window.addEventListener('mousemove', handleMove);
-    return () => window.removeEventListener('mousemove', handleMove);
-  }, []);
-
-  return (
-    <div name="home" className="w-full min-h-[100svh] bg-transparent flex flex-col justify-center relative overflow-hidden px-2 sm:px-4 md:px-8" style={{ perspective: 1000 }}>
-        {/* Animated Background Elements */}
-        <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0 pointer-events-none">
-             <motion.div animate={{ x: mousePos.x, y: mousePos.y }} className="absolute top-[-10%] right-[-5%] w-96 h-96 bg-cyan-500/20 rounded-full blur-[100px]"></motion.div>
-             <motion.div animate={{ x: mousePos.x * -1.2, y: mousePos.y * -1.2 }} className="absolute bottom-[20%] left-[-10%] w-72 h-72 bg-blue-600/20 rounded-full blur-[100px]"></motion.div>
-             <motion.div animate={{ x: mousePos.x * 0.5, y: mousePos.y * 0.5 }} className="absolute top-[40%] left-[60%] w-60 h-60 bg-purple-500/10 rounded-full blur-[80px]"></motion.div>
-        </div>
+    return (
+        <div name="home" className="w-full min-h-[100svh] bg-transparent flex flex-col justify-center relative overflow-hidden px-2 sm:px-4 md:px-8" style={{ perspective: 1000 }}>
+                <BackgroundAnimation />
+                <FloatingShape />
 
     <div className="max-w-screen-xl mx-auto px-2 sm:px-8 flex flex-col justify-center h-full z-20 relative w-full lg:w-[60%] pointer-events-auto">
         <motion.div

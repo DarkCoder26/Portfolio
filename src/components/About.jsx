@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FiCode, FiLayers, FiCpu, FiTarget } from 'react-icons/fi';
-import MagneticWrapper from './MagneticWrapper';
 
 const About = () => {
   const features = [
@@ -12,7 +11,14 @@ const About = () => {
   ];
 
   return (
-    <div name="about" className="w-full min-h-screen bg-transparent text-slate-300 py-16 md:py-20 lg:py-24 relative overflow-hidden z-10 transition-colors duration-500">
+    <motion.div 
+      name="about" 
+      className="w-full min-h-screen bg-transparent text-slate-300 py-16 md:py-20 lg:py-24 relative overflow-hidden z-10 transition-colors duration-500"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-100px" }}
+      transition={{ duration: 0.8 }}
+    >
       {/* Background Glow */}
       <motion.div 
         animate={{ scale: [1, 1.08, 1], opacity: [0.3, 0.5, 0.3] }}
@@ -78,23 +84,22 @@ const About = () => {
                className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6 md:mt-10" style={{ perspective: 1000 }}
             >
               {features.map((feature, idx) => (
-                <MagneticWrapper key={idx} className="flex w-full" intensity={0.1}>
                 <motion.div 
+                  key={idx}
                   variants={{
                     hidden: { y: 30, opacity: 0, rotateX: -20, filter: 'blur(4px)' },
                     visible: { y: 0, opacity: 1, rotateX: 0, filter: 'blur(0px)', transition: { type: "spring", stiffness: 70, damping: 20 } }
                   }}
                   whileHover={{ y: -7, scale: 1.06, boxShadow: "0 0 32px 0 #22d3ee33" }}
                   transition={{ type: 'spring', stiffness: 100, damping: 18 }}
-                  className="bg-slate-900/60 backdrop-blur-sm border border-slate-800 hover:border-cyan-500/50 p-4 rounded-xl shadow-lg hover:shadow-cyan-500/10 transition-all duration-300 group"
+                  className="bg-slate-900/60 backdrop-blur-sm border border-slate-800 hover:border-cyan-500/50 p-3 sm:p-4 rounded-xl shadow-lg hover:shadow-cyan-500/10 transition-all duration-300 group"
                 >
-                  <div className="flex items-center gap-3 mb-2">
-                    <feature.icon className="text-cyan-400 text-2xl group-hover:scale-110 transition-transform duration-300" />
-                    <h4 className="text-slate-200 font-bold group-hover:text-cyan-300 transition-colors">{feature.title}</h4>
+                  <div className="flex items-center gap-2 sm:gap-3 mb-2">
+                    <feature.icon className="text-cyan-400 text-xl sm:text-2xl md:text-3xl group-hover:scale-110 transition-transform duration-300" />
+                    <h4 className="text-slate-200 font-bold group-hover:text-cyan-300 transition-colors text-base sm:text-lg md:text-xl">{feature.title}</h4>
                   </div>
-                  <p className="text-sm text-slate-400 leading-relaxed">{feature.desc}</p>
+                  <p className="text-xs sm:text-sm md:text-base text-slate-400 leading-relaxed">{feature.desc}</p>
                 </motion.div>
-                </MagneticWrapper>
               ))}
             </motion.div>
           </motion.div>
@@ -137,8 +142,9 @@ const About = () => {
           </motion.div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
 export default About;
+

@@ -24,7 +24,14 @@ const Experience = () => {
       ];
 
   return (
-    <div name="experience" className="w-full min-h-screen bg-transparent text-slate-300 py-16 md:py-20 lg:py-24 relative z-10">
+    <motion.div 
+      name="experience" 
+      className="w-full min-h-screen bg-transparent text-slate-300 py-16 md:py-20 lg:py-24 relative z-10"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-100px" }}
+      transition={{ duration: 0.8 }}
+    >
       <div className="max-w-3xl mx-auto px-2 sm:px-4 md:px-8 flex flex-col justify-center w-full h-full">
            <motion.div 
              initial={{ opacity: 0, y: 20 }}
@@ -74,7 +81,7 @@ const Experience = () => {
           </div>
 
       </div>
-    </div>
+    </motion.div>
   );
 };
 

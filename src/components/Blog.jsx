@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import MagneticWrapper from './MagneticWrapper';
 
 const Blog = () => {
   const posts = [
@@ -28,7 +27,14 @@ const Blog = () => {
   ];
 
   return (
-    <div name="blog" className="w-full min-h-screen bg-transparent text-slate-300 py-16 md:py-20 lg:py-24 relative z-10">
+    <motion.div 
+      name="blog" 
+      className="w-full min-h-screen bg-transparent text-slate-300 py-16 md:py-20 lg:py-24 relative z-10"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-100px" }}
+      transition={{ duration: 0.8 }}
+    >
       <div className="max-w-4xl mx-auto px-2 sm:px-4 md:px-8 flex flex-col justify-center w-full h-full">
            <motion.div 
              initial={{ opacity: 0, y: 20 }}
@@ -57,8 +63,8 @@ const Blog = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {posts.map((post, index) => (
-            <MagneticWrapper key={index} className="flex h-full w-full" intensity={0.08}>
             <motion.div 
+              key={index}
               initial={{ opacity: 0, y: 40, rotateY: 15, scale: 0.95, filter: 'blur(4px)' }}
               whileInView={{ opacity: 1, y: 0, rotateY: 0, scale: 1, filter: 'blur(0px)' }}
               viewport={{ once: true, margin: "-50px" }}
@@ -77,12 +83,10 @@ const Blog = () => {
                 <span className="hover:text-cyan-400 cursor-pointer transition-colors">Read More →</span>
               </div>
             </motion.div>
-            </MagneticWrapper>
           ))}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
-
 export default Blog;
