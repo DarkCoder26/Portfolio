@@ -5,7 +5,7 @@ import {
   SiHtml5, SiCss, SiReact, SiNodedotjs, SiPhp, 
   SiGodotengine, SiMongodb, SiFirebase, 
   SiGit, SiGithub, SiFigma,
-  SiGoogle, SiMysql
+  SiGoogle, SiMysql,SiGooglecloud,SiAnthropic,SiOpenai,SiPerplexity
 } from 'react-icons/si';
 import { FaJava } from 'react-icons/fa';
 import { VscVscode } from 'react-icons/vsc';
@@ -34,12 +34,6 @@ const Skills = () => {
       ]
     },
     {
-        title: "Game Development",
-        skills: [
-            { name: "Godot Engine", icon: SiGodotengine, color: "#478CBF" }
-        ]
-    },
-    {
         title: "Databases",
         skills: [
             { name: "MongoDB", icon: SiMongodb, color: "#47A248" },
@@ -49,13 +43,21 @@ const Skills = () => {
     },
     {
         title: "Tools & Platforms",
-        skills: [
-            { name: "Git", icon: SiGit, color: "#F05032" },
-            { name: "GitHub", icon: SiGithub, color: "#ffffff" },
-            { name: "VS Code", icon: VscVscode, color: "#007ACC" },
-            { name: "Figma", icon: SiFigma, color: "#F24E1E" },
-            { name: "Gemini AI", icon: SiGoogle, color: "#8E75B2" }
-        ]
+    skills: [
+      { name: "Git", icon: SiGit, color: "#F05032" },
+      { name: "GitHub", icon: SiGithub, color: "#ffffff" },
+      { name: "VS Code", icon: VscVscode, color: "#007ACC" },
+      { name: "Gemini AI", icon: SiGoogle, color: "#8E75B2" },
+      
+      // AI & Agentic Platforms
+      { name: "Antigravity", icon: SiGoogle, color: "#4285F4" },
+      { name: "Google AI Studio", icon: SiGooglecloud, color: "#F4B400" },
+      { name: "Claude AI", icon: SiAnthropic, color: "#D97757" },
+      { name: "ChatGPT", icon: SiOpenai, color: "#10A37F" },
+      { name: "Perplexity", icon: SiPerplexity, color: "#22B8CD" }
+    ]
+          
+        
     }
   ];
 
