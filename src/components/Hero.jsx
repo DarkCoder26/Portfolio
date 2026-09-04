@@ -44,11 +44,15 @@ const Hero = () => {
                 <span className="text-cyan-400">
                     <TypeAnimation
                         sequence={[
-                            'Game Developer.',
+                            'Software Developer.',
                             2000,
-                            'Software Engineer.',
+                            'Website Developer.',
                             2000,
                             'Creative Coder.',
+                            2000,
+                            'MERN Developer.',
+                            2000,
+                            'Intermediate Backend Developer.',
                             2000,
                         ]}
                         wrapper="span"
