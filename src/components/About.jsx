@@ -6,7 +6,6 @@ const About = () => {
   const features = [
     { icon: FiCode, title: "Clean Code", desc: "Writing scalable, readable, and optimized logic for modern apps." },
     { icon: FiLayers, title: "Full Stack", desc: "Building seamless user experiences backed by robust APIs." },
-    { icon: FiCpu, title: "Game Dev", desc: "Crafting interactive digital worlds using Godot and C++." },
     { icon: FiTarget, title: "Problem Solver", desc: "Hackathon-proven ability to tackle real-world challenges." },
   ];
 
