@@ -5,7 +5,7 @@ import {
   SiHtml5, SiCss, SiReact, SiNodedotjs, SiPhp, 
   SiGodotengine, SiMongodb, SiFirebase, 
   SiGit, SiGithub, SiFigma,
-  SiGoogle, SiMysql,SiGooglecloud,SiAnthropic,SiOpenai,SiPerplexity
+  SiGoogle, SiMysql,SiGooglecloud,SiAnthropic,SiOpenai,SiPerplexity,SiExpo
 } from 'react-icons/si';
 import { FaJava } from 'react-icons/fa';
 import { VscVscode } from 'react-icons/vsc';
@@ -47,6 +47,7 @@ const Skills = () => {
       { name: "Git", icon: SiGit, color: "#F05032" },
       { name: "GitHub", icon: SiGithub, color: "#ffffff" },
       { name: "VS Code", icon: VscVscode, color: "#007ACC" },
+      { name: "Expo Go", icon: SiExpo, color: "#ffffff" },
       { name: "Gemini AI", icon: SiGoogle, color: "#8E75B2" },
       
       // AI & Agentic Platforms
