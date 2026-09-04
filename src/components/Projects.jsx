@@ -4,51 +4,177 @@ import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 
 const Projects = () => {
     const projects = [
-        {
-          title: "Pigeon App",
-          category: "Major Project",
-          description: "A social blogging platform where users share thoughts, interact with others, and use AI chatbot features. Built full application independently.",
-          tech: ["React Native", "Node.js", "MongoDB", "Socket.io", "Expo"],
-          github: "https://github.com/DarkCoder26/PigeonApp",
-          features: [
-            "Real-time communication",
-            "Blogging system",
-            "AI chatbot integration"
-          ],
-          color: "from-cyan-500 to-blue-500"
-        },
-        {
-          title: "CropCare",
-          category: "Internal Hackathon Winner (SIH Waitinglist)",
-          description: "Competed against 12 teams in the internal college hackathon and was the only team selected for the Smart India Hackathon (SIH) waiting list. Developed an AI-powered agriculture web application to help farmers detect crop diseases and find government schemes.",
-          tech: ["HTML", "CSS", "JavaScript"],
-          github: "https://github.com/DarkCoder26",
-          features: [
-            "AI-based crop disease detection",
-            "Government schemes information",
-            "Responsive design"
-          ],
-          color: "from-green-500 to-emerald-500"
-        }
-        ,
-        {
-          title: "Calculator Pro",
-          category: "Python GUI Application",
-          description: "An advanced calculator for technical and non-technical users. Features a modern GUI, basic and scientific functions, unit conversions, calculation history, and more. Built with Python and Kivy for cross-platform compatibility.",
-          tech: ["Python", "Kivy"],
-          github: "https://github.com/DarkCoder26/Calculator-Pro.git",
-          features: [
-            "Basic arithmetic operations",
-            "Scientific functions: trigonometry, logarithms, exponentials",
-            "Unit conversions (length, mass, temperature, etc.)",
-            "Calculation history panel",
-            "Copy, paste, and clear entry buttons",
-            "Resizable and responsive window"
-          ],
-          color: "from-purple-500 to-cyan-500"
-        }
-      ];
+    {
+      title: "Pigeon App",
+      category: "Major Project",
+      description: "A social blogging platform where users share thoughts, interact with others, and use AI chatbot features. Built full application independently.",
+      tech: ["React Native", "Node.js", "MongoDB", "Socket.io", "Expo"],
+      github: "https://github.com/DarkCoder26/PigeonApp",
+      features: [
+        "Real-time communication",
+        "Blogging system",
+        "AI chatbot integration"
+      ],
+      color: "from-cyan-500 to-blue-500"
+    },
 
+    {
+      title: "CropCare",
+      category: "Internal Hackathon Winner (SIH Waitinglist)",
+      description: "Competed against 12 teams in the internal college hackathon and was the only team selected for the Smart India Hackathon (SIH) waiting list. Developed an AI-powered agriculture web application to help farmers detect crop diseases and find government schemes.",
+      tech: ["HTML", "CSS", "JavaScript"],
+      github: "https://github.com/DarkCoder26",
+      features: [
+        "AI-based crop disease detection",
+        "Government schemes information",
+        "Responsive design"
+      ],
+      color: "from-green-500 to-emerald-500"
+    },
+
+    {
+      title: "Calculator Pro",
+      category: "Python GUI Application",
+      description: "An advanced calculator for technical and non-technical users. Features a modern GUI, basic and scientific functions, unit conversions, calculation history, and more. Built with Python and Kivy for cross-platform compatibility.",
+      tech: ["Python", "Kivy"],
+      github: "https://github.com/DarkCoder26/Calculator-Pro.git",
+      features: [
+        "Basic arithmetic operations",
+        "Scientific functions: trigonometry, logarithms, exponentials",
+        "Unit conversions (length, mass, temperature, etc.)",
+        "Calculation history panel",
+        "Copy, paste, and clear entry buttons",
+        "Resizable and responsive window"
+      ],
+      color: "from-purple-500 to-cyan-500"
+    },
+
+    {
+      title: "Note-Writer",
+      category: "Web Application",
+      description: "An advanced notes maker application with multiple export format support.",
+      tech: ["JavaScript"],
+      github: "https://github.com/DarkCoder26/Note-Writer",
+      features: [
+        "Advanced note creation",
+        "Multiple export formats",
+        "Easy-to-use interface"
+      ],
+      color: "from-yellow-500 to-orange-500"
+    },
+
+    {
+      title: "Voice-Assistant",
+      category: "AI Application",
+      description: "A voice assistant application designed to understand voice commands and perform different tasks.",
+      tech: ["JavaScript"],
+      github: "https://github.com/DarkCoder26/Voice-Assistant",
+      features: [
+        "Voice command support",
+        "Speech-based interaction",
+        "Task automation"
+      ],
+      color: "from-cyan-500 to-blue-500"
+    },
+
+    {
+      title: "Stock-Market-Analysis-Platform",
+      category: "Finance Platform",
+      description: "A real-time stock market analysis platform designed to provide market-related information and analysis.",
+      tech: ["JavaScript"],
+      github: "https://github.com/DarkCoder26/Stock-Market-Analysis-Platform",
+      features: [
+        "Stock market analysis",
+        "Real-time market information",
+        "Interactive interface"
+      ],
+      color: "from-green-500 to-emerald-500"
+    },
+
+    {
+      title: "CropCareAppBasedUI",
+      category: "Frontend Application",
+      description: "A friendly agriculture-focused application interface designed around the CropCare concept.",
+      tech: ["JavaScript"],
+      github: "https://github.com/DarkCoder26/CropCareAppBasedUI",
+      features: [
+        "Farmer-friendly interface",
+        "Agriculture-focused UI",
+        "Responsive application design"
+      ],
+      color: "from-green-500 to-lime-500"
+    },
+
+    {
+      title: "NewsUI",
+      category: "News Application",
+      description: "A clean and modern news application interface designed for presenting news content in an easy-to-use format.",
+      tech: ["JavaScript"],
+      github: "https://github.com/DarkCoder26/NewsUI",
+      features: [
+        "Modern news interface",
+        "News content layout",
+        "Responsive UI"
+      ],
+      color: "from-purple-500 to-pink-500"
+    },
+
+    {
+      title: "Habbit-Tracker",
+      category: "Productivity Application",
+      description: "An advanced habit tracker designed to help users manage and track their habits with a visual and open-source approach.",
+      tech: ["JavaScript"],
+      github: "https://github.com/DarkCoder26/Habbit-Tracker",
+      features: [
+        "Habit tracking",
+        "Visual progress tracking",
+        "Productivity-focused design"
+      ],
+      color: "from-blue-500 to-cyan-500"
+    },
+
+    {
+      title: "Connect",
+      category: "Social Network",
+      description: "A social networking application focused on connecting users and providing a platform for social interaction.",
+      tech: ["React Native"],
+      github: "https://github.com/DarkCoder26/Connect",
+      features: [
+        "Social networking",
+        "User interaction",
+        "Mobile application interface"
+      ],
+      color: "from-purple-500 to-indigo-500"
+    },
+        
+    {
+      title: "pass-photo-frontend",
+      category: "Frontend Application",
+      description: "Frontend application for the Pass Photo project.",
+      tech: ["JavaScript"],
+      github: "https://github.com/DarkCoder26/pass-photo-frontend",
+      features: [
+        "Frontend interface",
+        "Responsive design",
+        "User-friendly workflow"
+      ],
+      color: "from-yellow-500 to-amber-500"
+    },
+
+    {
+      title: "Portfolio",
+      category: "Personal Portfolio",
+      description: "Personal developer portfolio website showcasing projects, skills, experience, and development work.",
+      tech: ["JavaScript", "React", "Tailwind CSS"],
+      github: "https://github.com/DarkCoder26/Portfolio",
+      features: [
+        "Project showcase",
+        "Responsive portfolio",
+        "Modern developer-focused UI"
+      ],
+      color: "from-cyan-500 to-purple-500"
+    }
+  ];
   return (
     <div name="projects" className="w-full min-h-screen bg-transparent text-slate-300 py-16 md:py-20 lg:py-24 relative overflow-hidden z-10">
       {/* Background decoration */}
